@@ -12,3 +12,4 @@ Washington to derive insights into the usage patterns.
 3. Install the required dependencies:
 ```bash
 pip install pandas numpy matplotlib seaborn wordcloud
+pip install -r requirements.txt
