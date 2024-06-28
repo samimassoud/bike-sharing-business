@@ -86,7 +86,60 @@ def generate_report(city):
     with open(f"{city}_report.txt", 'w') as f:
         f.write(report)
     logging.info(f"Report generated for {city}")
+def wordcloud ():
+    from os import path
+    from PIL import Image, ImageOps
+    import numpy as np
+    import matplotlib.pyplot as plt
+    from wordcloud import WordCloud, STOPWORDS
+
+    # Read the mask image
+    mask_image = Image.open("palestine_map.png")
+
+    # Convert the image to grayscale and invert it (if needed)
+    mask_image = ImageOps.grayscale(mask_image)
+    mask_image = ImageOps.invert(mask_image)
+
+    # Convert the image to a numpy array
+    alice_mask = np.array(mask_image)
+
+    stopwords = set(STOPWORDS)
+    stopwords.add("said")
+
+    # Define your keywords and their frequencies
+    data = {
+        'Economic': 12,
+        'Strain': 12,
+        'Role Shifts': 8,
+        'Online Education': 6,
+        'Gender': 10,
+        'Roles': 18,
+        'Occupation': 20,
+        'Education': 10,
+        'Online': 20,
+        'Think': 21,
+        'Educational': 10,
+        'Opportunities': 1
+    }
+
+    # Generate the word cloud with the specified mask and adjusted parameters
+    wc = WordCloud(
+        max_words=2000,
+        background_color='white',
+        contour_width=3,
+        contour_color='steelblue',
+        mask=alice_mask,
+        stopwords=stopwords
+    ).generate_from_frequencies(data)
+
+    # Show the word cloud
+    plt.imshow(wc, interpolation='bilinear')
+    plt.axis("off")
+    plt.show()
+
+
 if __name__ == "__main__":
     cities = ['chicago', 'new_york_city', 'washington']
     for city in cities:
         generate_report(city)
+
