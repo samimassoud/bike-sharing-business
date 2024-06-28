@@ -6,6 +6,11 @@ Washington to derive insights into the usage patterns.
 - Chicago: `chicago.csv`
 - New York: `new_york_city.csv`
 - Washington: `washington.csv`
+## Contributors:
+Bara'ah
+Mohannad Taqatqa
+Moment Qarajeh
+Rana Nofal
 ## How to Run
 1. Clone the repository.
 2. Ensure the datasets are in the same directory as the script.
@@ -13,8 +18,3 @@ Washington to derive insights into the usage patterns.
 ```bash
 pip install pandas numpy matplotlib seaborn wordcloud
 pip install -r requirements.txt
-Contributors:
-Bara'ah
-Mohannad Taqatqa
-Moment Qarajeh
-Rana Nofal
