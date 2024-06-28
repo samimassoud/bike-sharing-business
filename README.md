@@ -10,7 +10,7 @@ Washington to derive insights into the usage patterns.
 1. Sami
 2. Bara'ah
 3. Mohannad Taqatqa
-4. Moment Qarajeh
+4. Momen Qarajeh
 5. Rana Nofal
 ## How to Run
 1. Clone the repository.
