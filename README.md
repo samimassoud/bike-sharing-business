@@ -13,3 +13,8 @@ Washington to derive insights into the usage patterns.
 ```bash
 pip install pandas numpy matplotlib seaborn wordcloud
 pip install -r requirements.txt
+Contributors:
+Bara'ah
+Mohannad Taqatqa
+Moment Qarajeh
+Rana Nofal
